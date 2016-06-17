@@ -2,7 +2,7 @@
 #define RESETBUTTON_H
 
 #include "Arduino.h"
-#include "SDWritter.h"
+#include "SDWriter.h"
 
 /**
  *  ResetButton class
@@ -12,11 +12,11 @@ class ResetButton
 {
 	private:
 		int8_t interruptPin;
-		SDWritter* writter;
+		SDWriter* writer;
 		
 	public:
-		ResetButton(SDWritter* writter);
-		ResetButton(SDWritter* writter, int _interruptPin);
+		ResetButton(SDWriter* writer);
+		ResetButton(SDWriter* writer, int _interruptPin);
 		void init();
 		void reset();
 }
